@@ -1,28 +1,12 @@
 # Dockerized App
 
-## Tính năng
-
-- ✅ Express.js web server
-- ✅ RESTful API endpoints
-- ✅ Health check endpoint
-- ✅ Docker containerization
-- ✅ Docker Compose orchestration
-- ✅ Nginx reverse proxy (optional)
-- ✅ Development và Production environments
-
-## Cấu trúc dự án
-
-```
-dockerized-app/
-├── app.js                 # Main application file
-├── package.json           # Node.js dependencies
-├── Dockerfile            # Docker image configuration
-├── docker-compose.yml    # Production environment
-├── docker-compose.dev.yml # Development environment
-├── nginx.conf            # Nginx configuration
-├── .dockerignore         # Docker ignore file
-└── README.md             # This file
-```
+- Express.js web server
+- RESTful API endpoints
+- Health check endpoint
+- Docker containerization
+- Docker Compose orchestration
+- Nginx reverse proxy (optional)
+- Development và Production environments
 
 ## API Endpoints
 
@@ -143,34 +127,6 @@ docker rmi dockerized-app
 
 - `NODE_ENV` - Environment (development/production)
 - `PORT` - Port number (default: 3000)
-
-## Troubleshooting
-
-### Container không start
-
-```bash
-# Check logs
-docker-compose logs app
-
-# Check container status
-docker-compose ps
-```
-
-### Port conflicts
-
-Nếu port 3000 hoặc 80 đã được sử dụng, thay đổi trong `docker-compose.yml`:
-
-```yaml
-ports:
-  - "3001:3000"  # Thay đổi port host
-```
-
-### Permission issues
-
-```bash
-# Fix permissions
-sudo chown -R $USER:$USER .
-```
 
 ## Development
 
